@@ -1,0 +1,27 @@
+<nav id="nav">
+  <div class="hidden">
+    <h2 class="title" (click)="handleTitleClick()">
+      MediaSearch
+    </h2>
+    <div (click)="handleHamburger()" id="hamburger" class="hamburger">
+      <div class="lines"></div>
+      <div class="lines"></div>
+      <div class="lines"></div>
+    </div>
+  </div>
+  <ul>
+    <li>
+      <a (click)="handleClick('home')" id="home" routerLink="/" >Home</a>
+    </li>
+    <li>
+      <a (click)="handleClick('search')" id="search" routerLink="/search">Search</a>
+    </li>
+    <li>
+      <a (click)="handleClick('profile')" id="profile" routerLink="/profile">Profile</a>
+    </li>
+    <li>
+      <a (click)="handleClick('signup')" id="signup" routerLink="/signup">SignUp</a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>

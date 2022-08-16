@@ -1,0 +1,11 @@
+<div class="searchContainer">
+    <div class="searchform">
+        <button (click)="handleClick()">Search </button>
+        <input type="search" [(ngModel)]="search" name="search" id="search">
+    </div>
+    <div class="filters">
+            <div class="filter" (click)="handleFilters($event,'unsplash')" id="unsplash">Unsplash</div>
+            <div class="filter" (click)="handleFilters($event,'giphy')" id="giphy">Giphy</div>
+            <div class="filter" (click)="handleFilters($event,'youtube')" id="youtube">YouTube</div>
+    </div>
+</div>

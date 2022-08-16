@@ -1,0 +1,239 @@
+
+.container {
+    position: relative;
+    top: 10vh;
+    min-height: 90vh;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.sidebar {
+    display: grid;
+    width: 25vw;
+    grid-template-rows: auto auto auto auto;
+    grid-column: 1/span 1;
+    align-items: center;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    height: 90vh;
+
+}
+
+.icons {
+    padding-left: 3vw;
+    color: white;
+}
+
+.icons mat-icon {
+    opacity: 0;
+    visibility: none;
+}
+.sidebar ul {
+    grid-row: 2 / span 3;
+    padding: 0;
+    padding: 2vh 4vw;
+    padding-right: 0;
+}
+
+.sidebar ul li {
+    padding: 1vh 0 1vh 4vw;
+    list-style: none;
+    margin: 2vh 0 2vh auto;
+    font-size: large;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li mat-icon {
+    margin-right: 1vw;
+}
+.sidebar ul h3 {
+    padding: 1vh 3vw;
+    margin: 2vh auto;
+    height: 3vh;
+    font-weight: bolder;
+    font-size: larger;
+    color: gray;
+}
+.sidebar .logout {
+    display: flex;
+    padding: 2vh 2vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar .logout button {
+    margin-top: 2vh;
+    border-radius: 5px;
+    width: 10vw;
+    border: 1px solid rgba(255, 0, 0, 0.6);
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: none;
+    color: red;
+    height: 5vh;
+}
+
+.sidebar .logout button:hover {
+    background-color: red;
+    color: white;
+    transition: all 1s ease-in;
+}
+.sidebar ul li:hover {
+    background-color: #232323;
+    color: white;
+    border-radius: 50px 0 0 50px;
+    cursor: pointer;
+    transition: all 1s ease-in;
+}
+
+.logoutIcon {
+    visibility: none;
+    opacity: 0;
+}
+.profileContainer {
+    grid-column: 2 / span 4;
+    width: 75vw;
+}
+
+
+@media (max-width:1200px){
+    .sidebar ul li {
+        padding-left: 1vw;
+    }
+}
+
+@media (max-width:850px){
+    /* .sidebar ul{
+        padding: 2vh 1vw;
+    } */
+    .sidebar .logout button {
+        width: 15vw;
+        align-items: center;
+    }
+
+    /* .sidebar .logout button mat-icon {
+        font-size: large;
+        height: auto;
+        padding: 0;
+    }
+    .sidebar ul li {
+        font-size: medium;
+        font-weight: 500;
+    }
+    
+    .sidebar ul h3 {
+        font-size: medium;
+        font-weight: 500;
+              
+    } */
+}
+
+@media (max-width:650px){
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 10vh;
+        border: none;
+        width: 15vw;
+        background-color: #232323;
+        overflow: hidden;
+        color: white;
+    }
+
+    .sidebar ul li {
+        padding: 0;
+    }
+
+    .sidebar.expanded {
+        position: fixed;
+        left: 0;
+        border: none;
+        top: 10vh;
+        width: 30vw;
+        background-color: #232323;
+        transition: all 2s ease-in-out;
+        color: white;
+    }
+
+    .sidebar.expanded ul li {
+        margin: 3vh auto;
+    }
+    .icons mat-icon {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .sidebar .itemText, .sidebar ul h3  {
+        opacity: 0;
+        visibility: none;
+    }
+
+    .sidebar.expanded .itemText {
+        padding-left: 1vw;
+    }
+    .sidebar.expanded .itemText, .sidebar.expanded ul h3 {
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+    .sidebar .logoutIcon {
+        visibility: visible;
+        opacity: 1;
+        padding-left: 3vw;
+        color: red;
+    }
+    .sidebar.expanded ul li:hover, .sidebar ul li:hover {
+        background-color: white;
+        color: #232323;
+        padding-left: 2vw;
+        border-radius: 50px 0 0 50px;
+        cursor: pointer;
+        transition: all 1s ease-in;
+    }
+    .sidebar.expanded .logoutIcon {
+        visibility: none;
+        opacity: 0;
+    }
+    .sidebar .logout {
+        justify-content: flex-start;
+    }
+
+    .sidebar.expanded .logout {
+        justify-content: center;
+    }
+    .sidebar .logout button {
+        visibility: none;
+        opacity: 0;
+    }
+    
+  
+    .sidebar.expanded .logout button {
+        visibility: visible;
+        opacity: 1;
+        width: 20vw;
+    }
+
+}
+
+@media (max-width:550px){
+    .sidebar {
+        width: 15vw;
+    }
+    .sidebar.expanded {
+        width: 35vw;
+    }
+}
+
+@media (max-width:450px){
+    .sidebar {
+        width: 20vw;
+    }
+    .sidebar.expanded {
+        width: 45vw;
+    }
+}

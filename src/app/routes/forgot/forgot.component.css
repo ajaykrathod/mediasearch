@@ -1,0 +1,94 @@
+.container {
+    position: relative;
+    top: 10vh;
+    max-width: 100vw;
+    max-height: 90vh;
+    display: grid;
+    overflow: hidden;
+}
+
+.loginContainer {
+    width: 50vw;
+    height: 40vh;
+    display: grid;
+    place-items: center;
+    box-shadow: 1px 1px 10px 1px dimgrey;
+    background-color: #232323;
+    transform: skew(-10deg);
+    margin: 20vh auto 0 auto;
+    padding-bottom: 5vh;
+}
+
+.title {
+    text-align: center;
+    background-color: #FE5768;
+    padding: 10px 20px;
+    color: white;
+}
+
+.form {
+    display: grid;
+    row-gap: 4vh;
+    place-items: center;
+}
+
+.email {
+    line-height: 4vh;
+    font-size: medium;
+    background-color: #363636;
+    color: white;
+    width: 30vw;
+    outline: none;
+    padding: 3px 10px;
+}
+
+.emailError {
+    color: #e1afb4;
+    font-size: medium;
+}
+
+.email:focus, button:hover {
+    transform: translate(1px,1px);
+}
+.email::placeholder {
+    color: white;
+}
+
+
+button {
+    background-color: #FE5768;
+    border: none;
+    font-size: medium;
+    color: white;
+    padding: 7px 15px;
+}
+
+.links {
+    display: flex;
+    width: 90vw;
+    justify-content: space-around;
+}
+
+.signup strong a, .forgot strong a{
+    text-decoration: none;
+    color: #FE5768;
+}
+
+@media (max-width:600px){
+    .loginContainer {
+        width: 70vw;
+    }
+    .email, .password-input {
+        width: 40vw;
+    }
+}
+
+@media (max-width:350px){
+    .loginContainer {
+        transform: skew(-5deg);
+        width: 80vw;
+    }
+    .email {
+        width: 50vw;
+    }
+}

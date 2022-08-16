@@ -1,0 +1,44 @@
+<div class="container" id="container">
+    <div class="sidebar" id="sidebar">
+            <div class="icons" (click)="handleMenuClick()">
+                <mat-icon aria-hidden="false" aria-label="Menu icon" fontIcon="menu"></mat-icon>
+            </div>
+            <ul>
+                <h3>User</h3>
+                <li (click)="handleClick($event)" id="general">
+                    <mat-icon aria-hidden="false" aria-label="User icon" fontIcon="person"></mat-icon>
+                    <div class="itemText" id="general">
+                        General
+                    </div>
+                </li>
+                <li (click)="handleClick($event)" id="social">
+                    <mat-icon aria-hidden="false" aria-label="Social icon" fontIcon="groups"></mat-icon>
+                    <div class="itemText" id="social">
+                        Social Media
+                    </div>
+                </li>
+                <li (click)="handleClick($event)" id="settings">
+                    <mat-icon aria-hidden="false" aria-label="Settingsicon" fontIcon="settings"></mat-icon>
+                    <div class="itemText" id="settings">
+                        Settings
+                    </div>
+                </li>
+            </ul>
+            <div class="logoutIcon">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="logout"></mat-icon>
+            </div>
+            <div class="logout">
+                <button>
+                    <h3>
+                        logout
+                    </h3>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="logout"></mat-icon>
+                </button>
+            </div>
+    </div>
+    <div class="profileContainer">
+        <app-general *ngIf="general"></app-general>
+        <app-socialmedia *ngIf="social"></app-socialmedia>
+        <app-settings *ngIf="settings"></app-settings>
+    </div>
+</div>

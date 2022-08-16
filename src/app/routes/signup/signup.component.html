@@ -1,0 +1,47 @@
+<div class="container" id="container">
+    <div class="loginContainer">
+        <h2 class="title">
+            Signup
+        </h2>
+        <div class="form">
+                <input type="text" class="input" [(ngModel)]="name"  (ngModelChange)="onNameChange($event)" name="name" placeholder="Enter Your Name" id="name">
+                <div class="error" *ngIf="nameError">Enter your Name</div>
+                <input type="text" [(ngModel)]="username" (ngModelChange)="onUsernameChange($event)" class="input" name="username" placeholder="Enter Username" id="username">
+                <div class="error" *ngIf="usernameError">Enter username</div>
+                <input type="email" name="email" [(ngModel)]="email" (ngModelChange)="onEmailChange($event)" id="email" class="input" placeholder="Enter Your EMail">
+            <div class="error" *ngIf="emailError">Enter valid Email</div>
+            <div class="password">
+                <input [type]="type" [(ngModel)]="password" (ngModelChange)="onPasswordChange($event)" name="password" id="password" class="password-input" placeholder="Enter Your Password">
+                <div class="showhide" (click)="changeType()" *ngIf="type === 'password';else text">Show</div>
+                <ng-template #text >
+                    <div class="showhide" (click)="changeType()">
+                        Hide
+                    </div>
+                </ng-template>
+            </div>
+            <div class="error" *ngIf="passwordError">Password must contain Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character</div>
+            <button (click)="handleSignup()">SignUp</button>
+            <!-- <div *ngIf="message" class="message">{{message}}</div> -->
+        </div>
+    </div>
+    <div class="links">
+        <div class="signup">
+            <h4>Have an account</h4>
+            <strong>
+                <a routerLink="/login">
+                    Login
+                </a>
+            </strong>
+        </div>
+        <div class="forgot">
+            <h4>
+                Have an account But...
+            </h4>
+            <strong>
+                <a routerLink="/forgot">
+                    Forgot Password
+                </a> 
+            </strong> 
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: #FE5768;
+    padding: 3px 10px;
+}
+
+::selection {
+    padding: 3px 10px;
+    color: white;
+    background: #FE5768;
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

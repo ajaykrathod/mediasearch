@@ -1,0 +1,32 @@
+<div class="container" id="container">
+    <div class="loginContainer">
+        <h2 class="title">
+            Forgot Password
+        </h2>
+        <div class="form">
+            <input type="email" name="email" [(ngModel)]="email" (ngModelChange)="handleChange($event)"  class="email" placeholder="Enter Your EMail">
+            <div class="emailError" *ngIf="emailError">Enter valid Email</div>
+            <button (click)="handleForgot()">Mail Me Reset Link</button>
+        </div>
+    </div>
+    <div class="links">
+        <div class="signup">
+            <h4>Don't have an account</h4>
+            <strong>
+                <a routerLink="/signup">
+                    SignUp
+                </a>
+            </strong>
+        </div>
+        <div class="forgot">
+            <h4>
+                Have an account
+            </h4>
+            <strong>
+                <a routerLink="/login">
+                    Login
+                </a> 
+            </strong> 
+        </div>
+    </div>
+</div>

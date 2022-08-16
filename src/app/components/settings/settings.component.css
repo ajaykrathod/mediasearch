@@ -1,0 +1,79 @@
+.container {
+    padding: 3vh 0 0 4vw;
+}
+
+.title {
+    font-size: large;
+    font-weight: 600;
+    color: gray;
+}
+
+.title:hover {
+    color: black;
+    transition: all 1s ease;
+}
+.generalContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.form {
+    display: grid;
+    grid-column: 1fr;
+    grid-template-columns: auto;
+    margin-top: 2vh;
+    row-gap: 2vh;
+}
+
+.form button {
+    margin-top: 2vh;
+    line-height: 4vh;
+    border-radius: 5px;
+    width: 25vw;
+    color: red;
+    border: 1px solid red;
+    outline: none;
+    background: none;
+    font-weight: 500;
+    font-size: medium;
+}
+
+.form button:hover {
+    background-color: red;
+    color: white;
+    transition: all 1s ease-in;
+}
+
+
+
+.loginfo {
+    margin: 2vh 0 0 0;
+}
+
+.loginfo ul {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 2vh;
+    padding-left: 2vw;
+}
+
+.loginfo ul li {
+    list-style: none;
+    font-size: medium;
+}
+.logtitle {
+    font-size: medium;
+    font-weight: 500;
+}
+
+@media (max-width:650px){
+    .form button {
+        width: 40vw;
+    }
+}
+
+@media (max-width:450px){
+    .form button {
+        width: 60vw;
+    }
+}

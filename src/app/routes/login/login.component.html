@@ -1,0 +1,42 @@
+<div class="container" id="container">
+    <div class="loginContainer">
+        <h2 class="title">
+            Login
+        </h2>
+        <div class="form">
+            <input type="email" (ngModelChange)="onEmailChange($event)" name="email" [(ngModel)]="email" id="" class="email" placeholder="Enter Your EMail">
+            <div class="error" *ngIf="emailError">Enter valid Email</div>
+            <div class="password">
+                <input [type]="type" [(ngModel)]="password" (ngModelChange)="onPasswordChange($event)" name="password" id="" class="password-input" placeholder="Enter Your Password">
+                <div class="showhide" (click)="changeType()" *ngIf="type === 'password';else text">Show</div>
+                <ng-template #text >
+                    <div class="showhide" (click)="changeType()">
+                        Hide
+                    </div>
+                </ng-template>
+            </div>
+            <div class="error" *ngIf="passwordError">Password must contain Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character</div>
+            <button (click)="handleLogin()">Login</button>
+        </div>
+    </div>
+    <div class="links">
+        <div class="signup">
+            <h4>Don't have an account</h4>
+            <strong>
+                <a routerLink="/signup">
+                    SignUp
+                </a>
+            </strong>
+        </div>
+        <div class="forgot">
+            <h4>
+                Have an account But...
+            </h4>
+            <strong>
+                <a routerLink="/forgot">
+                    Forgot Password
+                </a> 
+            </strong> 
+        </div>
+    </div>
+</div>
